@@ -4,18 +4,6 @@ on:
     branches:
       - develop-test
 jobs:
-  build:
-    runs-on: windows-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
-        with:
-           persist-credentials: false
-           fetch-depth: 0
-
-      - name: Build Source
-        run: .\Build-All.ps1 -ForceClean -BuildMode Source
-
   build-docs:
     runs-on: windows-latest
     steps:
